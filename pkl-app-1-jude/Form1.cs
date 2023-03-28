@@ -16,5 +16,21 @@ namespace pkl_app_1_jude
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var userId = textBox1.Text;
+            var password = textBox2.Text;
+
+            if ((userId == "jude") && (password == "asdfasdf"))
+            {
+                MessageBox.Show("Login berhasil!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Login gagal");
+            }
+        }
     }
 }
