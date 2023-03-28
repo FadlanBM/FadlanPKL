@@ -10,27 +10,17 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_jude
 {
-    public partial class Form1 : Form
+    public partial class FormString : Form
     {
-        public Form1()
+        public FormString()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var userId = textBox1.Text;
-            var password = textBox2.Text;
-
-            if ((userId == "jude") && (password == "asdfasdf"))
-            {
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Login Gagal");
-                Application.Exit();
-            }
+            var nama = textBox1.Text;
+            label2.Text = $"Halo {nama}!";
         }
     }
 }
