@@ -23,5 +23,12 @@ namespace pkl_app_1_jude
             form.MdiParent = this;
             form.Show();
         }
+
+        private void numerikTambahKaliToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormNumerik();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

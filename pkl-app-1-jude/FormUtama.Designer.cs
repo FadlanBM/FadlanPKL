@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.latihanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ganjilGenapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numerikTambahKaliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // latihanToolStripMenuItem
             // 
             this.latihanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ganjilGenapToolStripMenuItem});
+            this.ganjilGenapToolStripMenuItem,
+            this.numerikTambahKaliToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -58,6 +60,13 @@
             this.ganjilGenapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ganjilGenapToolStripMenuItem.Text = "String Nama";
             this.ganjilGenapToolStripMenuItem.Click += new System.EventHandler(this.ganjilGenapToolStripMenuItem_Click);
+            // 
+            // numerikTambahKaliToolStripMenuItem
+            // 
+            this.numerikTambahKaliToolStripMenuItem.Name = "numerikTambahKaliToolStripMenuItem";
+            this.numerikTambahKaliToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.numerikTambahKaliToolStripMenuItem.Text = "Numerik Tambah Kali";
+            this.numerikTambahKaliToolStripMenuItem.Click += new System.EventHandler(this.numerikTambahKaliToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -81,5 +90,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem latihanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ganjilGenapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem numerikTambahKaliToolStripMenuItem;
     }
 }
