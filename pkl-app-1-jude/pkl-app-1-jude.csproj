@@ -64,6 +64,12 @@
     <Compile Include="FormString.Designer.cs">
       <DependentUpon>FormString.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTanggal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTanggal.Designer.cs">
+      <DependentUpon>FormTanggal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormString.resx">
       <DependentUpon>FormString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTanggal.resx">
+      <DependentUpon>FormTanggal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

@@ -32,6 +32,7 @@
             this.latihanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ganjilGenapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numerikTambahKaliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tanggalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.latihanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ganjilGenapToolStripMenuItem,
-            this.numerikTambahKaliToolStripMenuItem});
+            this.numerikTambahKaliToolStripMenuItem,
+            this.tanggalToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -57,7 +59,7 @@
             // ganjilGenapToolStripMenuItem
             // 
             this.ganjilGenapToolStripMenuItem.Name = "ganjilGenapToolStripMenuItem";
-            this.ganjilGenapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ganjilGenapToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.ganjilGenapToolStripMenuItem.Text = "String Nama";
             this.ganjilGenapToolStripMenuItem.Click += new System.EventHandler(this.ganjilGenapToolStripMenuItem_Click);
             // 
@@ -67,6 +69,13 @@
             this.numerikTambahKaliToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.numerikTambahKaliToolStripMenuItem.Text = "Numerik Tambah Kali";
             this.numerikTambahKaliToolStripMenuItem.Click += new System.EventHandler(this.numerikTambahKaliToolStripMenuItem_Click);
+            // 
+            // tanggalToolStripMenuItem
+            // 
+            this.tanggalToolStripMenuItem.Name = "tanggalToolStripMenuItem";
+            this.tanggalToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.tanggalToolStripMenuItem.Text = "Tanggal";
+            this.tanggalToolStripMenuItem.Click += new System.EventHandler(this.tanggalToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -91,5 +100,6 @@
         private System.Windows.Forms.ToolStripMenuItem latihanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ganjilGenapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem numerikTambahKaliToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tanggalToolStripMenuItem;
     }
 }

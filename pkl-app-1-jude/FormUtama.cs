@@ -30,5 +30,12 @@ namespace pkl_app_1_jude
             form.MdiParent = this;
             form.Show();
         }
+
+        private void tanggalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormTanggal();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
