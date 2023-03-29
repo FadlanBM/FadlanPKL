@@ -37,5 +37,12 @@ namespace pkl_app_1_jude
             form.MdiParent = this;
             form.Show();
         }
+
+        private void kalkulatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormKalkulator();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

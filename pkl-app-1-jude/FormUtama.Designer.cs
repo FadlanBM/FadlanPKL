@@ -33,13 +33,16 @@
             this.ganjilGenapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numerikTambahKaliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tanggalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.latihanToolStripMenuItem});
+            this.latihanToolStripMenuItem,
+            this.tugasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -77,6 +80,21 @@
             this.tanggalToolStripMenuItem.Text = "Tanggal";
             this.tanggalToolStripMenuItem.Click += new System.EventHandler(this.tanggalToolStripMenuItem_Click);
             // 
+            // tugasToolStripMenuItem
+            // 
+            this.tugasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kalkulatorToolStripMenuItem});
+            this.tugasToolStripMenuItem.Name = "tugasToolStripMenuItem";
+            this.tugasToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.tugasToolStripMenuItem.Text = "Tugas";
+            // 
+            // kalkulatorToolStripMenuItem
+            // 
+            this.kalkulatorToolStripMenuItem.Name = "kalkulatorToolStripMenuItem";
+            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
+            this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,5 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem ganjilGenapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem numerikTambahKaliToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tanggalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tugasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kalkulatorToolStripMenuItem;
     }
 }
