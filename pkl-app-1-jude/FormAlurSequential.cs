@@ -27,6 +27,9 @@ namespace pkl_app_1_jude
             var bayar = hargaApel * qtyApel;
 
             textBox1.Text = $"Harga = {hargaApel}. Jumlah = {qtyApel}. Jumlah bayar = {bayar}";
+            var x = 5;
+            if (x < 10)
+                MessageBox.Show("Kurang dari sepuluh");
         }
     }
 }

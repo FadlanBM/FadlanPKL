@@ -51,5 +51,13 @@ namespace pkl_app_1_jude
             form.MdiParent = this;
             form.Show();
         }
+
+        private void alurPercabanganToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormAlurPercabangan();
+            form.MdiParent = this;
+            form.Show();
+
+        }
     }
 }

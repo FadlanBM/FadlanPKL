@@ -37,6 +37,7 @@
             this.alurSequentialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alurPercabanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,8 @@
             this.numerikTambahKaliToolStripMenuItem,
             this.tanggalToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.alurSequentialToolStripMenuItem});
+            this.alurSequentialToolStripMenuItem,
+            this.alurPercabanganToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -111,6 +113,13 @@
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
+            // alurPercabanganToolStripMenuItem
+            // 
+            this.alurPercabanganToolStripMenuItem.Name = "alurPercabanganToolStripMenuItem";
+            this.alurPercabanganToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alurPercabanganToolStripMenuItem.Text = "Alur Percabangan";
+            this.alurPercabanganToolStripMenuItem.Click += new System.EventHandler(this.alurPercabanganToolStripMenuItem_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,5 +148,6 @@
         private System.Windows.Forms.ToolStripMenuItem kalkulatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem alurSequentialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alurPercabanganToolStripMenuItem;
     }
 }

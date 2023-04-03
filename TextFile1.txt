@@ -1,0 +1,54 @@
+        private void SampleSwitch()
+        {
+            double price = 60000;
+            double discount = 0.0;
+
+            switch (price)
+            {
+                case double p when p < 10000:
+                    discount = 10;
+                    break;
+                case double p when p >= 10000 && p < 50000:
+                    discount = 12.5;
+                    break;
+                case double p when p >= 50000 && p < 100000:
+                    discount = 15;
+                    break;
+                case double p when p >= 100000:
+                    discount = 17.5;
+                    break;
+                default:
+                    Console.WriteLine("Error: Invalid price.");
+                    break;
+            }
+
+            double hasil = price - (price * discount / 100);
+            Console.WriteLine("Price " + price + ".");
+            Console.WriteLine("Discount" + (discount * 100) + "%.");
+            Console.WriteLine("Hasil " + hasil + ".");
+        }
+
+        private void SampleSwitch2()
+        {
+            var operasi = "tambah";
+            var x = 20;
+            var y = 5;
+            double hasil = 0;
+            switch (operasi)
+            {
+                case "tambah":
+                    hasil = x + y;
+                    break;
+                case "kurang":
+                    hasil = x - y;
+                    break;
+                case "kali":
+                    hasil = x * y;
+                    break;
+                case "bagi":
+                    hasil = x / y;
+                    break;
+            }
+
+            Console.WriteLine($"{hasil}");
+        }

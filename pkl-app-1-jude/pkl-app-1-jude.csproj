@@ -70,6 +70,12 @@
     <Compile Include="FormNumerik.Designer.cs">
       <DependentUpon>FormNumerik.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAlurPercabangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlurPercabangan.Designer.cs">
+      <DependentUpon>FormAlurPercabangan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormString.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNumerik.resx">
       <DependentUpon>FormNumerik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAlurPercabangan.resx">
+      <DependentUpon>FormAlurPercabangan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormString.resx">
       <DependentUpon>FormString.cs</DependentUpon>
