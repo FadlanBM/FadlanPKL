@@ -130,6 +130,7 @@ namespace pkl_app_1_jude
                 angkaMemory = angkaTampilan / angkaMemory;
 
             textBox1.Text = angkaMemory.ToString("0.##");
+            angkaTampilan = angkaMemory;
         }
 
         private void button5_Click(object sender, EventArgs e)
