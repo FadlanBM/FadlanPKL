@@ -44,5 +44,12 @@ namespace pkl_app_1_jude
             form.MdiParent = this;
             form.Show();
         }
+
+        private void alurSequentialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormAlurSequential();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

@@ -33,6 +33,8 @@
             this.ganjilGenapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numerikTambahKaliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tanggalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.alurSequentialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -54,7 +56,9 @@
             this.latihanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ganjilGenapToolStripMenuItem,
             this.numerikTambahKaliToolStripMenuItem,
-            this.tanggalToolStripMenuItem});
+            this.tanggalToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.alurSequentialToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -62,23 +66,35 @@
             // ganjilGenapToolStripMenuItem
             // 
             this.ganjilGenapToolStripMenuItem.Name = "ganjilGenapToolStripMenuItem";
-            this.ganjilGenapToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.ganjilGenapToolStripMenuItem.Text = "String Nama";
+            this.ganjilGenapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ganjilGenapToolStripMenuItem.Text = "Variable String";
             this.ganjilGenapToolStripMenuItem.Click += new System.EventHandler(this.ganjilGenapToolStripMenuItem_Click);
             // 
             // numerikTambahKaliToolStripMenuItem
             // 
             this.numerikTambahKaliToolStripMenuItem.Name = "numerikTambahKaliToolStripMenuItem";
-            this.numerikTambahKaliToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.numerikTambahKaliToolStripMenuItem.Text = "Numerik Tambah Kali";
+            this.numerikTambahKaliToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.numerikTambahKaliToolStripMenuItem.Text = "Variable Numerik";
             this.numerikTambahKaliToolStripMenuItem.Click += new System.EventHandler(this.numerikTambahKaliToolStripMenuItem_Click);
             // 
             // tanggalToolStripMenuItem
             // 
             this.tanggalToolStripMenuItem.Name = "tanggalToolStripMenuItem";
-            this.tanggalToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.tanggalToolStripMenuItem.Text = "Tanggal";
+            this.tanggalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tanggalToolStripMenuItem.Text = "Variable Tanggal";
             this.tanggalToolStripMenuItem.Click += new System.EventHandler(this.tanggalToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // alurSequentialToolStripMenuItem
+            // 
+            this.alurSequentialToolStripMenuItem.Name = "alurSequentialToolStripMenuItem";
+            this.alurSequentialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alurSequentialToolStripMenuItem.Text = "Alur Sequential";
+            this.alurSequentialToolStripMenuItem.Click += new System.EventHandler(this.alurSequentialToolStripMenuItem_Click);
             // 
             // tugasToolStripMenuItem
             // 
@@ -91,7 +107,7 @@
             // kalkulatorToolStripMenuItem
             // 
             this.kalkulatorToolStripMenuItem.Name = "kalkulatorToolStripMenuItem";
-            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
@@ -121,5 +137,7 @@
         private System.Windows.Forms.ToolStripMenuItem tanggalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tugasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kalkulatorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem alurSequentialToolStripMenuItem;
     }
 }
