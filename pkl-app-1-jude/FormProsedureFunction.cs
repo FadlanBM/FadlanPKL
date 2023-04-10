@@ -42,14 +42,65 @@ namespace pkl_app_1_jude
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var hasil = Perkalian();
+            var hasil = Perkalian(5,2);
             MessageBox.Show(hasil.ToString());
         }
 
-        private int Perkalian()
+        private int Perkalian(int x, int y)
         {
-            var result = 5 * 2;
+            var result = x * y;
             return result;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (button5.Text == "Start")
+            {
+                button5.Text = "Stop";
+                timer1.Enabled = true;
+            }
+            else
+            {
+                button5.Text = "Start";
+                timer1.Enabled = false;
+                var hasil = ApakahBerhasil(progressBar1.Value);
+                TampilkanHasil(hasil);
+            }
+        }
+        private int counter = -1;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (progressBar1.Value == 20 || progressBar1.Value == 0)
+                counter = -counter;
+            progressBar1.Value += counter;
+            label1.Text = progressBar1.Value.ToString();
+        }
+
+        private bool ApakahBerhasil(int score)
+        {
+            if(score == 20)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void TampilkanHasil(bool sukses)
+        {
+            if (sukses) 
+            {
+                label2.Text = "SUKSES!!!";
+                label2.ForeColor = Color.Green;
+            }
+            else
+            {
+                label2.Text = "GAGAL!!";
+                label2.ForeColor = Color.Red;
+            }
         }
     }
 }

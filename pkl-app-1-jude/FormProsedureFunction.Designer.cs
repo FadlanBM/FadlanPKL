@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button5 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -74,11 +80,57 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(25, 190);
+            this.progressBar1.Maximum = 20;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(395, 22);
+            this.progressBar1.TabIndex = 4;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(148, 152);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(128, 23);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Start";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(175, 240);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 42);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(175, 361);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 25);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Hasil";
+            // 
             // FormProsedureFunction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 450);
+            this.ClientSize = new System.Drawing.Size(435, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -86,6 +138,7 @@
             this.Name = "FormProsedureFunction";
             this.Text = "FormProsedureFunction";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -95,5 +148,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
