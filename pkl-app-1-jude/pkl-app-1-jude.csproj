@@ -76,6 +76,12 @@
     <Compile Include="FormAlurPercabangan.Designer.cs">
       <DependentUpon>FormAlurPercabangan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProsedureFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProsedureFunction.Designer.cs">
+      <DependentUpon>FormProsedureFunction.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormString.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlurPercabangan.resx">
       <DependentUpon>FormAlurPercabangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProsedureFunction.resx">
+      <DependentUpon>FormProsedureFunction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormString.resx">
       <DependentUpon>FormString.cs</DependentUpon>

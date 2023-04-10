@@ -59,5 +59,12 @@ namespace pkl_app_1_jude
             form.Show();
 
         }
+
+        private void prosedurFunctionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormProsedureFunction();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
