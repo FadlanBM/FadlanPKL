@@ -25,12 +25,13 @@ namespace pkl_app_1_jude
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UcapSelamatPagi();
+            var saya = "Yudis";
+            UcapSelamatPagi(saya);
         }
 
-        private void UcapSelamatPagi()
+        private void UcapSelamatPagi(string nama)
         {
-            MessageBox.Show("Selamat Pagi");
+            MessageBox.Show($"Selamat Pagi {nama}");
         }
 
         private void button4_Click(object sender, EventArgs e)
