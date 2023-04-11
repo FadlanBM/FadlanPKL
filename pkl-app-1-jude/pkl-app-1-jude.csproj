@@ -58,6 +58,12 @@
     <Compile Include="FormAlurSequential.Designer.cs">
       <DependentUpon>FormAlurSequential.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormArray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArray.Designer.cs">
+      <DependentUpon>FormArray.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKalkulator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlurSequential.resx">
       <DependentUpon>FormAlurSequential.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArray.resx">
+      <DependentUpon>FormArray.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKalkulator.resx">
       <DependentUpon>FormKalkulator.cs</DependentUpon>

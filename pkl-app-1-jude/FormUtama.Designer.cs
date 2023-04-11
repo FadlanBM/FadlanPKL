@@ -36,10 +36,12 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.alurSequentialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alurPercabanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.prosedurFunctionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.arrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +66,9 @@
             this.alurSequentialToolStripMenuItem,
             this.alurPercabanganToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.prosedurFunctionToolStripMenuItem});
+            this.prosedurFunctionToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.arrayToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -109,6 +113,18 @@
             this.alurPercabanganToolStripMenuItem.Text = "Alur Percabangan";
             this.alurPercabanganToolStripMenuItem.Click += new System.EventHandler(this.alurPercabanganToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // prosedurFunctionToolStripMenuItem
+            // 
+            this.prosedurFunctionToolStripMenuItem.Name = "prosedurFunctionToolStripMenuItem";
+            this.prosedurFunctionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prosedurFunctionToolStripMenuItem.Text = "Prosedur Function";
+            this.prosedurFunctionToolStripMenuItem.Click += new System.EventHandler(this.prosedurFunctionToolStripMenuItem_Click);
+            // 
             // tugasToolStripMenuItem
             // 
             this.tugasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -124,17 +140,17 @@
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem2
+            // toolStripMenuItem3
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
             // 
-            // prosedurFunctionToolStripMenuItem
+            // arrayToolStripMenuItem
             // 
-            this.prosedurFunctionToolStripMenuItem.Name = "prosedurFunctionToolStripMenuItem";
-            this.prosedurFunctionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.prosedurFunctionToolStripMenuItem.Text = "Prosedur Function";
-            this.prosedurFunctionToolStripMenuItem.Click += new System.EventHandler(this.prosedurFunctionToolStripMenuItem_Click);
+            this.arrayToolStripMenuItem.Name = "arrayToolStripMenuItem";
+            this.arrayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arrayToolStripMenuItem.Text = "Array";
+            this.arrayToolStripMenuItem.Click += new System.EventHandler(this.arrayToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -167,5 +183,7 @@
         private System.Windows.Forms.ToolStripMenuItem alurPercabanganToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem prosedurFunctionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem arrayToolStripMenuItem;
     }
 }
