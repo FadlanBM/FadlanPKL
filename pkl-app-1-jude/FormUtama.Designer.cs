@@ -44,6 +44,7 @@
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.animasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +73,8 @@
             this.toolStripMenuItem3,
             this.arrayToolStripMenuItem,
             this.array2DimensiToolStripMenuItem,
-            this.grafikToolStripMenuItem});
+            this.grafikToolStripMenuItem,
+            this.animasiToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -170,6 +172,13 @@
             this.grafikToolStripMenuItem.Text = "Grafik";
             this.grafikToolStripMenuItem.Click += new System.EventHandler(this.grafikToolStripMenuItem_Click);
             // 
+            // animasiToolStripMenuItem
+            // 
+            this.animasiToolStripMenuItem.Name = "animasiToolStripMenuItem";
+            this.animasiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.animasiToolStripMenuItem.Text = "Animasi";
+            this.animasiToolStripMenuItem.Click += new System.EventHandler(this.animasiToolStripMenuItem_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,5 +214,6 @@
         private System.Windows.Forms.ToolStripMenuItem arrayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem array2DimensiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem animasiToolStripMenuItem;
     }
 }
