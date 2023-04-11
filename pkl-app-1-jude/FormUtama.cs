@@ -73,5 +73,12 @@ namespace pkl_app_1_jude
             form.MdiParent = this;
             form.Show();
         }
+
+        private void array2DimensiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormArray2Dimensi();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
