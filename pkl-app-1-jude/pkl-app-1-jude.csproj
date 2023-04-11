@@ -70,6 +70,12 @@
     <Compile Include="FormArray2Dimensi.Designer.cs">
       <DependentUpon>FormArray2Dimensi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGraphic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGraphic.Designer.cs">
+      <DependentUpon>FormGraphic.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKalkulator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormArray2Dimensi.resx">
       <DependentUpon>FormArray2Dimensi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGraphic.resx">
+      <DependentUpon>FormGraphic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKalkulator.resx">
       <DependentUpon>FormKalkulator.cs</DependentUpon>

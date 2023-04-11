@@ -40,9 +40,10 @@
             this.prosedurFunctionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.arrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.array2DimensiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.array2DimensiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,8 @@
             this.prosedurFunctionToolStripMenuItem,
             this.toolStripMenuItem3,
             this.arrayToolStripMenuItem,
-            this.array2DimensiToolStripMenuItem});
+            this.array2DimensiToolStripMenuItem,
+            this.grafikToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -139,6 +141,13 @@
             this.arrayToolStripMenuItem.Text = "Array";
             this.arrayToolStripMenuItem.Click += new System.EventHandler(this.arrayToolStripMenuItem_Click);
             // 
+            // array2DimensiToolStripMenuItem
+            // 
+            this.array2DimensiToolStripMenuItem.Name = "array2DimensiToolStripMenuItem";
+            this.array2DimensiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.array2DimensiToolStripMenuItem.Text = "Array 2 Dimensi";
+            this.array2DimensiToolStripMenuItem.Click += new System.EventHandler(this.array2DimensiToolStripMenuItem_Click);
+            // 
             // tugasToolStripMenuItem
             // 
             this.tugasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -154,12 +163,12 @@
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
-            // array2DimensiToolStripMenuItem
+            // grafikToolStripMenuItem
             // 
-            this.array2DimensiToolStripMenuItem.Name = "array2DimensiToolStripMenuItem";
-            this.array2DimensiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.array2DimensiToolStripMenuItem.Text = "Array 2 Dimensi";
-            this.array2DimensiToolStripMenuItem.Click += new System.EventHandler(this.array2DimensiToolStripMenuItem_Click);
+            this.grafikToolStripMenuItem.Name = "grafikToolStripMenuItem";
+            this.grafikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafikToolStripMenuItem.Text = "Grafik";
+            this.grafikToolStripMenuItem.Click += new System.EventHandler(this.grafikToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -195,5 +204,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem arrayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem array2DimensiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grafikToolStripMenuItem;
     }
 }
