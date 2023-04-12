@@ -12,12 +12,18 @@ namespace pkl_app_1_jude
 {
     public partial class FormAnimasi : Form
     {
-        private const int BOARD_SIZE = 50;
+        private const int BOARD_SIZE = 25;
         private const int SQUARE_SIZE = 10;
 
         private Bitmap kanvas = null;
         private int actorX = 0;
         private int actorY = 0;
+
+        private int lastX = 0;
+        private int lastY = 0;
+
+        private int[] bodyX = new int[300];
+        private int[] bodyY = new int[300];
 
         private string arah = "kanan";
 
@@ -25,6 +31,7 @@ namespace pkl_app_1_jude
         private int foodY = 15;
 
         private int score = 0;
+        private int panjang = 0;
 
         public FormAnimasi()
         {
@@ -54,10 +61,25 @@ namespace pkl_app_1_jude
             if (kanvas is null) return;
             using (var grafik = Graphics.FromImage(kanvas))
             {
-                var brush = new SolidBrush(Color.DarkRed);
-                grafik.FillRectangle(brush, actorX * SQUARE_SIZE, actorY * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                var brushBody = new SolidBrush(Color.CornflowerBlue);
+
+                bodyX[0] = lastX;
+                bodyY[0] = lastY;
+                for (var i = panjang; i>0; i--)
+                {
+                    if (i == 0) break;
+
+                    bodyX[i] = bodyX[i-1];
+                    bodyY[i] = bodyY[i - 1];
+                    grafik.FillRectangle(brushBody, bodyX[i] * SQUARE_SIZE, bodyY[i] * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                }
+                //var brushHead = new SolidBrush(Color.DarkRed);
+                //grafik.FillRectangle(brushHead, actorX * SQUARE_SIZE, actorY * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                //var brushHead = new SolidBrush(Color.DarkRed);
+                grafik.DrawImage(pictureBox2.Image, actorX * SQUARE_SIZE-15, actorY * SQUARE_SIZE-15, 40, 40);
             }
         }
+
         private void DrawFood()
         {
             if (kanvas is null) return;
@@ -76,6 +98,9 @@ namespace pkl_app_1_jude
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            lastX = actorX;
+            lastY = actorY;
+
             switch (arah)
             {
                 case "kiri": 
@@ -105,17 +130,45 @@ namespace pkl_app_1_jude
             label1.Text = $"{arah}: {actorX}, {actorY} | Score: {score}";
 
             DrawBoard();
-            DrawActor();
+
+            if (ApakahNabrakBody())
+            {
+                GameOver();
+            }
 
             if (ApakahActorMakanFood())
             {
                 RandomFood();
                 score++;
+                panjang++;
             }
-
+            DrawActor();
             DrawFood();
 
             pictureBox1.Invalidate();
+        }
+
+        private bool ApakahNabrakBody()
+        {
+            for(var i = 0 ;i <= panjang; i++)
+            {
+                if (bodyX[i] != actorX) continue;
+                if (bodyY[i] != actorY) continue;
+                return true;
+            }
+            return false;
+        }
+
+        private void GameOver()
+        {
+            timer1.Enabled = false;
+            timer2.Enabled = false;
+            using (var grafik = Graphics.FromImage(kanvas))
+            {
+                var brush = new SolidBrush(Color.Red);
+                grafik.DrawString("Game Over!", new Font("Arial", 16), brush, new Point(20,20));
+            }
+
         }
 
         private bool ApakahActorMakanFood()
@@ -127,7 +180,6 @@ namespace pkl_app_1_jude
 
         private void FormAnimasi_KeyDown(object sender, KeyEventArgs e)
         {
-            var x = e.KeyCode;
             switch (e.KeyCode)
             {
                 case Keys.Up:
