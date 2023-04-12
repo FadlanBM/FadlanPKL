@@ -21,6 +21,11 @@ namespace pkl_app_1_jude
 
         private string arah = "kanan";
 
+        private int foodX = 21;
+        private int foodY = 15;
+
+        private int score = 0;
+
         public FormAnimasi()
         {
             InitializeComponent();
@@ -38,8 +43,8 @@ namespace pkl_app_1_jude
                         var brush = new SolidBrush(Color.LightCyan);
                         grafik.FillRectangle(brush, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
 
-                        var pen = new Pen(Color.PowderBlue);// (Color.PowderBlue);
-                        grafik.DrawRectangle(pen, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                        //var pen = new Pen(Color.PowderBlue);// (Color.PowderBlue);
+                        //grafik.DrawRectangle(pen, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
                     }
             }
         }
@@ -51,6 +56,15 @@ namespace pkl_app_1_jude
             {
                 var brush = new SolidBrush(Color.DarkRed);
                 grafik.FillRectangle(brush, actorX * SQUARE_SIZE, actorY * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+            }
+        }
+        private void DrawFood()
+        {
+            if (kanvas is null) return;
+            using (var grafik = Graphics.FromImage(kanvas))
+            {
+                var brush = new SolidBrush(Color.MediumSeaGreen);
+                grafik.FillRectangle(brush, foodX * SQUARE_SIZE, foodX * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
 
@@ -88,10 +102,27 @@ namespace pkl_app_1_jude
             if (actorY < 0)
                 actorY = BOARD_SIZE-1;
 
-            label1.Text = $"{arah}: {actorX}, {actorY}";
+            label1.Text = $"{arah}: {actorX}, {actorY} | Score: {score}";
+
             DrawBoard();
             DrawActor();
+
+            if (ApakahActorMakanFood())
+            {
+                RandomFood();
+                score++;
+            }
+
+            DrawFood();
+
             pictureBox1.Invalidate();
+        }
+
+        private bool ApakahActorMakanFood()
+        {
+            if (actorX == foodX && actorY == foodY)
+                return true;
+            return false;
         }
 
         private void FormAnimasi_KeyDown(object sender, KeyEventArgs e)
@@ -117,6 +148,26 @@ namespace pkl_app_1_jude
         private void FormAnimasi_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             e.IsInputKey = true;
+        }
+        private void RandomFood()
+        {
+            Random randomX = new Random();
+            foodX = randomX.Next(0, BOARD_SIZE);
+
+            Random randomY = new Random();
+            foodY = randomY.Next(0, BOARD_SIZE);
+            timer2.Stop();
+            timer2.Start();
+        }
+
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            RandomFood();
+            DrawBoard();
+            DrawActor();
+            DrawFood();
+            pictureBox1.Invalidate();
         }
     }
 }
