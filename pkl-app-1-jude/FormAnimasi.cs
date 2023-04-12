@@ -24,10 +24,10 @@ namespace pkl_app_1_jude
         public FormAnimasi()
         {
             InitializeComponent();
-            DrawPapanCatur();
+            DrawBoard();
             pictureBox1.Invalidate();
         }
-        private void DrawPapanCatur()
+        private void DrawBoard()
         {
             kanvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             using (var grafik = Graphics.FromImage(kanvas))
@@ -38,7 +38,7 @@ namespace pkl_app_1_jude
                         var brush = new SolidBrush(Color.LightCyan);
                         grafik.FillRectangle(brush, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
 
-                        var pen = new Pen(Color.LightCyan);// (Color.PowderBlue);
+                        var pen = new Pen(Color.PowderBlue);// (Color.PowderBlue);
                         grafik.DrawRectangle(pen, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
                     }
             }
@@ -89,7 +89,7 @@ namespace pkl_app_1_jude
                 actorY = BOARD_SIZE-1;
 
             label1.Text = $"{arah}: {actorX}, {actorY}";
-            DrawPapanCatur();
+            DrawBoard();
             DrawActor();
             pictureBox1.Invalidate();
         }

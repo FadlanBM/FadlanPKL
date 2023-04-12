@@ -94,5 +94,12 @@ namespace pkl_app_1_jude
             form.MdiParent = this;
             form.Show();
         }
+
+        private void animasi2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormAnimasi2();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

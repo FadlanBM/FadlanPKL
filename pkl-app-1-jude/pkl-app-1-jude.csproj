@@ -64,6 +64,12 @@
     <Compile Include="FormAnimasi.Designer.cs">
       <DependentUpon>FormAnimasi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAnimasi2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnimasi2.Designer.cs">
+      <DependentUpon>FormAnimasi2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormArray.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAnimasi.resx">
       <DependentUpon>FormAnimasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimasi2.resx">
+      <DependentUpon>FormAnimasi2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormArray.resx">
       <DependentUpon>FormArray.cs</DependentUpon>
