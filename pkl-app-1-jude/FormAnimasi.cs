@@ -88,6 +88,7 @@ namespace pkl_app_1_jude
             if (actorY < 0)
                 actorY = BOARD_SIZE-1;
 
+            label1.Text = $"{arah}: {actorX}, {actorY}";
             DrawPapanCatur();
             DrawActor();
             pictureBox1.Invalidate();
