@@ -41,9 +41,11 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.arrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.array2DimensiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.animasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.animasi2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +74,9 @@
             this.toolStripMenuItem3,
             this.arrayToolStripMenuItem,
             this.array2DimensiToolStripMenuItem,
-            this.grafikToolStripMenuItem});
+            this.grafikToolStripMenuItem,
+            this.animasiToolStripMenuItem,
+            this.animasi2ToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -148,6 +152,20 @@
             this.array2DimensiToolStripMenuItem.Text = "Array 2 Dimensi";
             this.array2DimensiToolStripMenuItem.Click += new System.EventHandler(this.array2DimensiToolStripMenuItem_Click);
             // 
+            // grafikToolStripMenuItem
+            // 
+            this.grafikToolStripMenuItem.Name = "grafikToolStripMenuItem";
+            this.grafikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafikToolStripMenuItem.Text = "Grafik";
+            this.grafikToolStripMenuItem.Click += new System.EventHandler(this.grafikToolStripMenuItem_Click);
+            // 
+            // animasiToolStripMenuItem
+            // 
+            this.animasiToolStripMenuItem.Name = "animasiToolStripMenuItem";
+            this.animasiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.animasiToolStripMenuItem.Text = "Animasi";
+            this.animasiToolStripMenuItem.Click += new System.EventHandler(this.animasiToolStripMenuItem_Click);
+            // 
             // tugasToolStripMenuItem
             // 
             this.tugasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -163,12 +181,12 @@
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
-            // grafikToolStripMenuItem
+            // animasi2ToolStripMenuItem
             // 
-            this.grafikToolStripMenuItem.Name = "grafikToolStripMenuItem";
-            this.grafikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.grafikToolStripMenuItem.Text = "Grafik";
-            this.grafikToolStripMenuItem.Click += new System.EventHandler(this.grafikToolStripMenuItem_Click);
+            this.animasi2ToolStripMenuItem.Name = "animasi2ToolStripMenuItem";
+            this.animasi2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.animasi2ToolStripMenuItem.Text = "Animasi2";
+            this.animasi2ToolStripMenuItem.Click += new System.EventHandler(this.animasi2ToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -205,5 +223,7 @@
         private System.Windows.Forms.ToolStripMenuItem arrayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem array2DimensiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem animasiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem animasi2ToolStripMenuItem;
     }
 }
