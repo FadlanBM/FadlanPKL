@@ -163,6 +163,7 @@ namespace pkl_app_1_jude
         {
             timer1.Enabled = false;
             timer2.Enabled = false;
+            button1.Enabled = true;
             using (var grafik = Graphics.FromImage(kanvas))
             {
                 var brush = new SolidBrush(Color.Red);
@@ -220,6 +221,22 @@ namespace pkl_app_1_jude
             DrawActor();
             DrawFood();
             pictureBox1.Invalidate();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            timer2.Enabled = true;
+            actorX = 0;
+            actorY = 0;
+            arah = "kanan";
+            panjang = 0;
+            //button1.Enabled = false;
+    }
+
+        private void button1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            e.IsInputKey = true;
         }
     }
 }
