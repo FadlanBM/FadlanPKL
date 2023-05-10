@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pkl_app_1_jude.SpaceInvaders;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -98,6 +99,13 @@ namespace pkl_app_1_jude
         private void animasi2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new FormAnimasi2();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void spaceInvadersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new SpaceInvadersForm();
             form.MdiParent = this;
             form.Show();
         }
