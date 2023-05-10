@@ -132,6 +132,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceInvaders\Classes\ActorModel.cs" />
+    <Compile Include="SpaceInvaders\Classes\BentengModel.cs" />
+    <Compile Include="SpaceInvaders\Classes\EnemyModel.cs" />
+    <Compile Include="SpaceInvaders\SpaceInvadersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceInvaders\SpaceInvadersForm.Designer.cs">
+      <DependentUpon>SpaceInvadersForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,14 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="SpaceInvaders\SpaceInvadersForm.resx">
+      <DependentUpon>SpaceInvadersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -202,6 +214,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\asset_head2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpaceInvaders\Assets\Enemy1Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpaceInvaders\Assets\Enemy2Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpaceInvaders\Assets\Enemy3Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpaceInvaders\Assets\PlayerBlue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
