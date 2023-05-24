@@ -270,8 +270,8 @@ namespace pkl_app_1_jude.SpaceInvaders
 
         private void EnemyMoveTimer_Tick(object sender, EventArgs e)
         {
-            var palingLeft = _listEnemy.Min(x => x.PosX);
-            var palingRight = _listEnemy.Max(x => x.PosX + x.Width);
+            var palingLeft = _listEnemy.Where(x => x.IsAlive).Min(x => x.PosX);
+            var palingRight = _listEnemy.Where(x => x.IsAlive).Max(x => x.PosX + x.Width);
 
             if ((_arahEnemy == "left") && (palingLeft <= 0))
                 _arahEnemy = "right";
