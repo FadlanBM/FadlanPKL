@@ -288,7 +288,7 @@ namespace pkl_app_1_jude.SpaceInvaders
             if (_actor.PosX <= 0)
                 _actor.PosX = 0;
             if (_actor.PosX > SPACE_BOARD_WIDTH - _actor.Width)
-                _actor.PosY = SPACE_BOARD_WIDTH - _actor.Width;
+                _actor.PosX = SPACE_BOARD_WIDTH - _actor.Width;
             DrawAll();
         }
 
