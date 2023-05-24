@@ -140,6 +140,7 @@
     <Compile Include="SpaceInvaders\Classes\ActorModel.cs" />
     <Compile Include="SpaceInvaders\Classes\BentengModel.cs" />
     <Compile Include="SpaceInvaders\Classes\EnemyModel.cs" />
+    <Compile Include="SpaceInvaders\Classes\PeluruModel.cs" />
     <Compile Include="SpaceInvaders\SpaceInvadersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +227,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SpaceInvaders\Assets\PlayerBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpaceInvaders\Assets\Bullet1.jpg" />
+    <Content Include="SpaceInvaders\Assets\PeluruActor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
