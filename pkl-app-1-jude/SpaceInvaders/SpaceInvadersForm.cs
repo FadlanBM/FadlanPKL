@@ -22,6 +22,7 @@ namespace pkl_app_1_jude.SpaceInvaders
         private ActorModel _actor;
         private string _arahEnemy = "left";
         private string _arahActor = "";
+        private PeluruModel _peluruActor;
 
         public SpaceInvadersForm()
         {
@@ -29,10 +30,12 @@ namespace pkl_app_1_jude.SpaceInvaders
             _listEnemy = new List<EnemyModel>();
             _listBenteng = new List<BentengModel>();
             _actor = new ActorModel();
+            _peluruActor = new PeluruModel(); 
 
             CreateEnemyObject();
             CreateBentengObject();
             CreateActorObject();
+            CreatePeluruActorObject();
             DrawAll();
 
         }
@@ -43,6 +46,7 @@ namespace pkl_app_1_jude.SpaceInvaders
             DrawEnemy();
             DrawBenteng();
             DrawActor();
+            DrawPeluru();
             SpaceBoard.Invalidate();
         }
 
@@ -76,6 +80,13 @@ namespace pkl_app_1_jude.SpaceInvaders
             using (var grafik = Graphics.FromImage(_canvas))
             {
                 grafik.DrawImage(_actor.Gambar, _actor.PosX * SQUARE_SIZE, _actor.PosY * SQUARE_SIZE, _actor.Width * SQUARE_SIZE, _actor.Height * SQUARE_SIZE);
+            }
+        }
+        private void DrawPeluru()
+        {
+            using (var grafik = Graphics.FromImage(_canvas))
+            {
+                grafik.DrawImage(_peluruActor.Gambar, _peluruActor.PosX * SQUARE_SIZE, _peluruActor.PosY * SQUARE_SIZE, _peluruActor.Width * SQUARE_SIZE, _peluruActor.Height * SQUARE_SIZE);
             }
         }
 
@@ -247,6 +258,14 @@ namespace pkl_app_1_jude.SpaceInvaders
             };
         }
 
+        private void CreatePeluruActorObject()
+        {
+            _peluruActor.IsAktif = false;
+            _peluruActor.Width = 1;
+            _peluruActor.Height = 3;
+            _peluruActor.Gambar = PeluruPic.Image;
+        }
+
         private void EnemyMoveTimer_Tick(object sender, EventArgs e)
         {
             var palingLeft = _listEnemy.Min(x => x.PosX);
@@ -275,6 +294,9 @@ namespace pkl_app_1_jude.SpaceInvaders
                 case Keys.Right:
                     _arahActor = "right";
                     break;
+                case Keys.Space:
+                    TembakMusuh();
+                    break;
             }
         }
 
@@ -288,13 +310,34 @@ namespace pkl_app_1_jude.SpaceInvaders
             if (_actor.PosX <= 0)
                 _actor.PosX = 0;
             if (_actor.PosX > SPACE_BOARD_WIDTH - _actor.Width)
-                _actor.PosY = SPACE_BOARD_WIDTH - _actor.Width;
+                _actor.PosX = SPACE_BOARD_WIDTH - _actor.Width;
             DrawAll();
         }
 
         private void SpaceInvadersForm_KeyUp(object sender, KeyEventArgs e)
         {
             _arahActor = string.Empty;
+        }
+
+        private void TembakMusuh()
+        {
+            if (_peluruActor.IsAktif)
+                return;
+            _peluruActor.PosX = _actor.PosX + (_actor.Width/2);
+            _peluruActor.PosY = _actor.PosY;
+            _peluruActor.IsAktif = true;
+        }
+
+        private void PeluruActorTimer_Tick(object sender, EventArgs e)
+        {
+            if (!_peluruActor.IsAktif)
+                return;
+            _peluruActor.PosY--;
+            if (_peluruActor.PosY <= 0)
+            {
+                _peluruActor.IsAktif = false;
+                _peluruActor.PosY = -10;
+            }
         }
     }
 }

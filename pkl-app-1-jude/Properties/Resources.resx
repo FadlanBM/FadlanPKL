@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="asset_head2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\asset_head2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="asset_head" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\asset_head.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Enemy1Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\SpaceInvaders\Assets\Enemy1Red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="asset_head2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asset_head2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Enemy2Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\SpaceInvaders\Assets\Enemy2Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,7 +133,13 @@
   <data name="Enemy3Yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\SpaceInvaders\Assets\Enemy3Yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PeluruActor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\SpaceInvaders\Assets\PeluruActor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PlayerBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\SpaceInvaders\Assets\PlayerBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bullet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\SpaceInvaders\Assets\Bullet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
