@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,7 @@ namespace pkl_app_1_jude.SpaceInvaders
             CreateBentengObject();
             CreateActorObject();
             CreatePeluruActorObject();
+
             DrawAll();
 
         }
@@ -71,7 +73,7 @@ namespace pkl_app_1_jude.SpaceInvaders
         {
             using (var grafik = Graphics.FromImage(_canvas))
             {
-                foreach (var enemy in _listEnemy)
+                foreach (var enemy in _listEnemy.Where(x => x.IsAlive).ToList())
                     grafik.DrawImage(enemy.Gambar, enemy.PosX * SQUARE_SIZE, enemy.PosY * SQUARE_SIZE, enemy.Width * SQUARE_SIZE, enemy.Height * SQUARE_SIZE);
             }
         }
@@ -251,7 +253,7 @@ namespace pkl_app_1_jude.SpaceInvaders
             _actor = new ActorModel
             {
                 Gambar = ActorPic.Image,
-                Width = 6,
+                Width = 5,
                 Height = 3,
                 PosX = 0,
                 PosY = 36,
@@ -333,11 +335,38 @@ namespace pkl_app_1_jude.SpaceInvaders
             if (!_peluruActor.IsAktif)
                 return;
             _peluruActor.PosY--;
+
+            var enemyTertembak = GetEnemyTertembak();
+            if (enemyTertembak != null)
+            {
+                enemyTertembak.IsAlive = false;
+                _peluruActor.IsAktif = false;
+                _peluruActor.PosY = -10;
+            }
+
             if (_peluruActor.PosY <= 0)
             {
                 _peluruActor.IsAktif = false;
                 _peluruActor.PosY = -10;
             }
+        }
+
+        private EnemyModel GetEnemyTertembak()
+        {
+            foreach(var enemy in _listEnemy.Where(x => x.IsAlive).OrderByDescending(x => x.Id).ToList())
+            {
+                //  deteksi apakah kena bagian bawah enemy
+                //      - tidak kena
+                if (_peluruActor.PosY != enemy.PosY + enemy.Height)
+                    continue;
+                if (_peluruActor.PosX < enemy.PosX)
+                    continue;
+                if (_peluruActor.PosX > enemy.PosX + enemy.Width)
+                    continue;
+                //      - kena!!
+                return enemy;
+            }
+            return null;
         }
     }
 }
