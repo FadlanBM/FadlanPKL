@@ -251,7 +251,7 @@ namespace pkl_app_1_jude.SpaceInvaders
                     Height = HEIGHT,
                     Width = WIDTH,
                     PosX = (i * (WIDTH+4)) - WIDTH,
-                    PosY = 32
+                    PosY = 30
                 };
                 _listBenteng.Add(newBenteng);
             }
@@ -345,6 +345,15 @@ namespace pkl_app_1_jude.SpaceInvaders
                 return;
             _peluruActor.PosY--;
 
+            //  apakah peluru kena benteng?
+            var bentengTertembak = GetBentengTertembak();
+            if (bentengTertembak != null)
+            {
+                _peluruActor.IsAktif = false;
+                _peluruActor.PosY = -10;
+            }
+
+            //  apakah peluru kena enemy?
             var enemyTertembak = GetEnemyTertembak();
             if (enemyTertembak != null)
             {
@@ -353,6 +362,7 @@ namespace pkl_app_1_jude.SpaceInvaders
                 _peluruActor.PosY = -10;
             }
 
+            //  apakah peluru kena udah lewat batas atas
             if (_peluruActor.PosY <= 0)
             {
                 _peluruActor.IsAktif = false;
@@ -374,6 +384,21 @@ namespace pkl_app_1_jude.SpaceInvaders
                     continue;
                 //      - kena!!
                 return enemy;
+            }
+            return null;
+        }
+
+        private BentengModel GetBentengTertembak()
+        {
+            foreach(var benteng in _listBenteng)
+            {
+                if (_peluruActor.PosY > benteng.PosY)
+                    continue;
+                if (_peluruActor.PosX < benteng.PosX)
+                    continue;
+                if (_peluruActor.PosX > benteng.PosX + benteng.Width)
+                    continue;
+                return benteng;
             }
             return null;
         }
