@@ -392,7 +392,7 @@ namespace pkl_app_1_jude.SpaceInvaders
         {
             foreach(var benteng in _listBenteng)
             {
-                if (_peluruActor.PosY > benteng.PosY)
+                if (_peluruActor.PosY > benteng.PosY + 1 + benteng.Height)
                     continue;
                 if (_peluruActor.PosX < benteng.PosX)
                     continue;
