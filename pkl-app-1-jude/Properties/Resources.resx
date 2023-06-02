@@ -130,6 +130,9 @@
   <data name="Enemy2Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\SpaceInvaders\Assets\Enemy2Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Bullet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\SpaceInvaders\Assets\Bullet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Enemy3Yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\SpaceInvaders\Assets\Enemy3Yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,7 +142,10 @@
   <data name="PlayerBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\SpaceInvaders\Assets\PlayerBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bullet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\SpaceInvaders\Assets\Bullet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="explosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\SpaceInvaders\Assets\explosion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Explosion48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\SpaceInvaders\Assets\Explosion48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

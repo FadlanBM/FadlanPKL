@@ -123,6 +123,26 @@ namespace pkl_app_1_jude.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap explosion {
+            get {
+                object obj = ResourceManager.GetObject("explosion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Explosion48 {
+            get {
+                object obj = ResourceManager.GetObject("Explosion48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PeluruActor {
             get {
                 object obj = ResourceManager.GetObject("PeluruActor", resourceCulture);

@@ -32,12 +32,14 @@
             this.EnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.ActorMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.PeluruActorTimer = new System.Windows.Forms.Timer(this.components);
+            this.ExplosionPic = new System.Windows.Forms.PictureBox();
             this.PeluruPic = new System.Windows.Forms.PictureBox();
             this.ActorPic = new System.Windows.Forms.PictureBox();
             this.Enemy3Pic = new System.Windows.Forms.PictureBox();
             this.Enemy2Pic = new System.Windows.Forms.PictureBox();
             this.Enemy1Pic = new System.Windows.Forms.PictureBox();
             this.SpaceBoard = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ExplosionPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeluruPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).BeginInit();
@@ -63,6 +65,16 @@
             this.PeluruActorTimer.Enabled = true;
             this.PeluruActorTimer.Interval = 25;
             this.PeluruActorTimer.Tick += new System.EventHandler(this.PeluruActorTimer_Tick);
+            // 
+            // ExplosionPic
+            // 
+            this.ExplosionPic.Image = global::pkl_app_1_jude.Properties.Resources.Explosion48;
+            this.ExplosionPic.Location = new System.Drawing.Point(243, 418);
+            this.ExplosionPic.Name = "ExplosionPic";
+            this.ExplosionPic.Size = new System.Drawing.Size(47, 46);
+            this.ExplosionPic.TabIndex = 6;
+            this.ExplosionPic.TabStop = false;
+            this.ExplosionPic.Visible = false;
             // 
             // PeluruPic
             // 
@@ -129,6 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 469);
+            this.Controls.Add(this.ExplosionPic);
             this.Controls.Add(this.PeluruPic);
             this.Controls.Add(this.ActorPic);
             this.Controls.Add(this.Enemy3Pic);
@@ -142,6 +155,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpaceInvadersForm_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SpaceInvadersForm_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.SpaceInvadersForm_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.ExplosionPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeluruPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).EndInit();
@@ -163,5 +177,6 @@
         private System.Windows.Forms.Timer ActorMoveTimer;
         private System.Windows.Forms.Timer PeluruActorTimer;
         private System.Windows.Forms.PictureBox PeluruPic;
+        private System.Windows.Forms.PictureBox ExplosionPic;
     }
 }
