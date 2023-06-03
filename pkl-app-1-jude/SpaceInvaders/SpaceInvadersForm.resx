@@ -126,4 +126,10 @@
   <metadata name="PeluruActorTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>299, 19</value>
   </metadata>
+  <metadata name="PeluruEnemyMoveTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>435, 21</value>
+  </metadata>
+  <metadata name="PeluruEnemyTembakTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>605, 23</value>
+  </metadata>
 </root>

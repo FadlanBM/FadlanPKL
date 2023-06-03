@@ -32,6 +32,8 @@
             this.EnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.ActorMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.PeluruActorTimer = new System.Windows.Forms.Timer(this.components);
+            this.PeluruEnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.EnemyBulletPic = new System.Windows.Forms.PictureBox();
             this.ExplosionPic = new System.Windows.Forms.PictureBox();
             this.PeluruPic = new System.Windows.Forms.PictureBox();
             this.ActorPic = new System.Windows.Forms.PictureBox();
@@ -39,6 +41,8 @@
             this.Enemy2Pic = new System.Windows.Forms.PictureBox();
             this.Enemy1Pic = new System.Windows.Forms.PictureBox();
             this.SpaceBoard = new System.Windows.Forms.PictureBox();
+            this.PeluruEnemyTembakTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.EnemyBulletPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExplosionPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeluruPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).BeginInit();
@@ -65,6 +69,22 @@
             this.PeluruActorTimer.Enabled = true;
             this.PeluruActorTimer.Interval = 25;
             this.PeluruActorTimer.Tick += new System.EventHandler(this.PeluruActorTimer_Tick);
+            // 
+            // PeluruEnemyMoveTimer
+            // 
+            this.PeluruEnemyMoveTimer.Enabled = true;
+            this.PeluruEnemyMoveTimer.Interval = 200;
+            this.PeluruEnemyMoveTimer.Tick += new System.EventHandler(this.PeluruEnemyTimer_Tick);
+            // 
+            // EnemyBulletPic
+            // 
+            this.EnemyBulletPic.Image = global::pkl_app_1_jude.Properties.Resources.EnemyBullet;
+            this.EnemyBulletPic.Location = new System.Drawing.Point(296, 418);
+            this.EnemyBulletPic.Name = "EnemyBulletPic";
+            this.EnemyBulletPic.Size = new System.Drawing.Size(47, 46);
+            this.EnemyBulletPic.TabIndex = 7;
+            this.EnemyBulletPic.TabStop = false;
+            this.EnemyBulletPic.Visible = false;
             // 
             // ExplosionPic
             // 
@@ -136,11 +156,18 @@
             this.SpaceBoard.TabStop = false;
             this.SpaceBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.SpaceBoard_Paint);
             // 
+            // PeluruEnemyTembakTimer
+            // 
+            this.PeluruEnemyTembakTimer.Enabled = true;
+            this.PeluruEnemyTembakTimer.Interval = 4000;
+            this.PeluruEnemyTembakTimer.Tick += new System.EventHandler(this.PeluruEnemyTembakTimer_Tick);
+            // 
             // SpaceInvadersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 469);
+            this.Controls.Add(this.EnemyBulletPic);
             this.Controls.Add(this.ExplosionPic);
             this.Controls.Add(this.PeluruPic);
             this.Controls.Add(this.ActorPic);
@@ -155,6 +182,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpaceInvadersForm_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SpaceInvadersForm_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.SpaceInvadersForm_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.EnemyBulletPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExplosionPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeluruPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).EndInit();
@@ -178,5 +206,8 @@
         private System.Windows.Forms.Timer PeluruActorTimer;
         private System.Windows.Forms.PictureBox PeluruPic;
         private System.Windows.Forms.PictureBox ExplosionPic;
+        private System.Windows.Forms.Timer PeluruEnemyMoveTimer;
+        private System.Windows.Forms.PictureBox EnemyBulletPic;
+        private System.Windows.Forms.Timer PeluruEnemyTembakTimer;
     }
 }

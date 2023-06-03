@@ -230,6 +230,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SpaceInvaders\Assets\Bullet1.jpg" />
+    <Content Include="SpaceInvaders\Assets\EnemyBullet.png" />
     <Content Include="SpaceInvaders\Assets\explosion.png" />
     <Content Include="SpaceInvaders\Assets\Explosion48.png" />
     <Content Include="SpaceInvaders\Assets\PeluruActor.png" />
