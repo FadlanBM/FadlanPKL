@@ -462,14 +462,17 @@ namespace pkl_app_1_jude.SpaceInvaders
 
         private List<EnemyModel> ListEnemyBawah()
         {
-            var listPosX= _listEnemy.Select(x => x.PosX).Distinct().ToList();
+            var listPosX= _listEnemy
+                .Where(x => x.IsAlive == 0)
+                .Select(x => x.PosX)
+                .Distinct().ToList();
             var listEnemyBawah = new List<EnemyModel>();
             foreach(var item in listPosX)
             {
                 var enemyBawah = _listEnemy
                     .Where(x => x.IsAlive == 0)
                     .Where(x => x.PosX == item)
-                    .OrderBy(x => x.PosY)
+                    .OrderByDescending(x => x.PosY)
                     .First();
                 listEnemyBawah.Add(enemyBawah);
             }
