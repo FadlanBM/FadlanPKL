@@ -469,7 +469,7 @@ namespace pkl_app_1_jude.SpaceInvaders
                 var enemyBawah = _listEnemy
                     .Where(x => x.IsAlive == 0)
                     .Where(x => x.PosX == item)
-                    .OrderByDescending(x => x.PosY)
+                    .OrderBy(x => x.PosY)
                     .First();
                 listEnemyBawah.Add(enemyBawah);
             }
