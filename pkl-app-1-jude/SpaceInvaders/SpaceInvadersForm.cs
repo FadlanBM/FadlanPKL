@@ -427,11 +427,34 @@ namespace pkl_app_1_jude.SpaceInvaders
                     continue;
                 if (_peluruActor.PosX > benteng.PosX + benteng.Width-1)
                     continue;
+                if (benteng.DefencePower <= 0)
+                    continue;
                 return benteng;
             }
             return null;
         }
 
+        private BentengModel GetBentengTertembakEnemy(PeluruModel peluru)
+        {
+            if (!peluru.IsAktif) return null;
+
+            foreach (var benteng in _listBenteng)
+            {
+                if (benteng.DefencePower <= 0)
+                    continue;
+
+                if (peluru.PosY < benteng.PosY)
+                    continue;
+                if (peluru.PosY > benteng.PosY + benteng.Height - 1)
+                    continue;
+                if (peluru.PosX < benteng.PosX)
+                    continue;
+                if (peluru.PosX > benteng.PosX + benteng.Width - 1)
+                    continue;
+                return benteng;
+            }
+            return null;
+        }
         private void PeluruEnemyTimer_Tick(object sender, EventArgs e)
         {
             foreach(var item in _listPeluruEnemy)
@@ -445,6 +468,15 @@ namespace pkl_app_1_jude.SpaceInvaders
                     item.IsAktif = false;
                     item.PosY = -10;
                 }
+
+                var benteng = GetBentengTertembakEnemy(item);
+                if (benteng != null)
+                {
+                    benteng.DefencePower--;
+                    item.IsAktif = false;
+                    item.PosY = -10;
+                }
+
             }
         }
 
