@@ -179,6 +179,35 @@ namespace pkl_app_1_jude.SpaceInvaders
                 }
             }
         }
+        private void DrawGameOver()
+        {
+            using (var grafik = Graphics.FromImage(_canvas))
+            {
+                var margin = 10;
+
+                Font font = new Font("Arial", 34, FontStyle.Bold);
+                string text = "GAME OVER!";
+                SizeF size = grafik.MeasureString(text, font);
+                size.Width += margin * 2;
+                size.Height += margin * 2;
+
+                var posXText = (SpaceBoard.Width/2) - (size.Width/2);
+                var posYText = 50;
+
+
+                Rectangle rect = new Rectangle((int)posXText, posYText, (int)size.Width, (int)size.Height);
+                var fillBrush = new SolidBrush(Color.AntiqueWhite);
+
+                grafik.FillRectangle(fillBrush, rect);
+                var line = new Pen(Color.DarkRed);
+                grafik.DrawRectangle(line, rect);
+
+                Brush brush = Brushes.DarkRed;
+                PointF position = new PointF(posXText + margin, posYText + margin);
+                grafik.DrawString(text, font, brush, position);
+            }
+            SpaceBoard.Invalidate();
+        }
 
 
         private void CreateEnemyObject()
@@ -477,7 +506,39 @@ namespace pkl_app_1_jude.SpaceInvaders
                     item.PosY = -10;
                 }
 
+                if (PeluruEnemyKenaActor(item))
+                {
+                    StopAllTimer();
+                    DrawGameOver();
+                }
+
+
             }
+        }
+
+        private bool PeluruEnemyKenaActor(PeluruModel peluru)
+        {
+            if (!peluru.IsAktif)
+                return false;
+            if (peluru.PosY < _actor.PosY)
+                return false;
+            if (peluru.PosY > _actor.PosY + _actor.Height - 1)
+                return false;
+            if (peluru.PosX < _actor.PosX)
+                return false;
+            if (peluru.PosX > _actor.PosX + _actor.Width - 1)
+                return false;
+
+            return true;
+        }
+
+        private void StopAllTimer()
+        {
+            EnemyMoveTimer.Stop();
+            ActorMoveTimer.Stop();
+            PeluruActorTimer.Stop();
+            PeluruEnemyMoveTimer.Stop();
+            PeluruEnemyTembakTimer.Stop();
         }
 
         private void PeluruEnemyTembakTimer_Tick(object sender, EventArgs e)
