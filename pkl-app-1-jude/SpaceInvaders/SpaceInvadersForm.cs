@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,6 +28,11 @@ namespace pkl_app_1_jude.SpaceInvaders
         private string _arahActor = "";
         private PeluruModel _peluruActor;
         private List<PeluruModel> _listPeluruEnemy;
+
+        const string ACTOR_NEMBAK_SOUND = "pkl_app_1_jude.actor-nembak.wav";
+        const string ENEMY_KENA_SOUND = "pkl_app_1_jude.enemy-hit.wav";
+        const string ENEMY_NEMBAK_SOUND = "pkl_app_1_jude.enemy-nembak.wav";
+        const string BENTENG_HIT_SOUND = "pkl_app_1_jude.benteng-hit.wav";
 
         public SpaceInvadersForm()
         {
@@ -113,6 +120,13 @@ namespace pkl_app_1_jude.SpaceInvaders
                 foreach(var item in _listPeluruEnemy.Where(x => x.IsAktif))
                     grafik.DrawImage(item.Gambar, item.PosX * SQUARE_SIZE, item.PosY * SQUARE_SIZE, item.Width * SQUARE_SIZE, item.Height * SQUARE_SIZE);
             }
+        }
+
+        private void PlaySound(string soundName)
+        {
+            Stream soundStream = typeof(Program).Assembly.GetManifestResourceStream(soundName);
+            SoundPlayer soundPlayer = new SoundPlayer(soundStream);
+            soundPlayer.Play();
         }
 
         private void MoveEnemy()
@@ -395,6 +409,7 @@ namespace pkl_app_1_jude.SpaceInvaders
             _peluruActor.PosX = _actor.PosX + (_actor.Width/2);
             _peluruActor.PosY = _actor.PosY;
             _peluruActor.IsAktif = true;
+            PlaySound(ACTOR_NEMBAK_SOUND);
         }
 
         private void PeluruActorTimer_Tick(object sender, EventArgs e)
@@ -418,6 +433,7 @@ namespace pkl_app_1_jude.SpaceInvaders
                 enemyTertembak.IsAlive = 1;
                 _peluruActor.IsAktif = false;
                 _peluruActor.PosY = -10;
+                PlaySound(ENEMY_KENA_SOUND);
             }
 
             //  apakah peluru kena udah lewat batas atas
@@ -504,6 +520,8 @@ namespace pkl_app_1_jude.SpaceInvaders
                     benteng.DefencePower--;
                     item.IsAktif = false;
                     item.PosY = -10;
+                    PlaySound(BENTENG_HIT_SOUND);
+
                 }
 
                 if (PeluruEnemyKenaActor(item))
@@ -551,6 +569,7 @@ namespace pkl_app_1_jude.SpaceInvaders
             peluru.IsAktif = true;
             peluru.PosX = enemyNembak.PosX;
             peluru.PosY = enemyNembak.PosY;
+            PlaySound(ENEMY_NEMBAK_SOUND);
         }
 
         private List<EnemyModel> ListEnemyBawah()
